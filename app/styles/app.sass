@@ -1,1 +1,42 @@
-@import "bourbon";
+@import "bourbon"
+
+body, html, body > .ember-view, .liquid-container, .liquid-child, .page
+  height: 100%
+
+body
+  margin: 0
+  font-family: 'Patrick Hand', cursive
+
+.page
+  padding: 20% 40px 40px 40px
+
+.page h1
+  text-align: center
+  font-size: 24px
+  color: #fff
+
+.page p
+  text-align: center
+  font-size: 18px
+  color: #fff
+
+.page a
+  color: #eee
+
+.categories.page
+  background: desaturate(darken(#24F983, 25%), 30%)
+
+.categories.page h1
+  color: #24F983
+
+.products.page
+  background: desaturate(darken(#C524F9, 25%), 30%)
+
+.products.page h1
+  color: #C524F9
+
+.wishlist.page
+  background: desaturate(darken(#F9E824, 25%), 30%)
+
+.wishlist.page h1
+  color: #F9E824

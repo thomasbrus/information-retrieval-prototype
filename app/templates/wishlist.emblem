@@ -1,0 +1,3 @@
+div.wishlist.page
+  h1 Showing wishlist...
+  p = link-to 'products' | Back to products

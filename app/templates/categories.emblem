@@ -1,0 +1,3 @@
+div.categories.page
+  h1 Listing categories...
+  p = link-to 'products' | Go to products

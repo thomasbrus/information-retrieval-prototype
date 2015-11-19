@@ -1,7 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return this.store.findAll('category');
-  }
+  activate() {
+    this._super(...arguments);
+    this.replaceWith('categories');
+  },
 });
