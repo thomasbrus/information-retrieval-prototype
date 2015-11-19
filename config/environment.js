@@ -42,7 +42,11 @@ module.exports = function(environment) {
   if (environment === 'production') {
     ENV.locationType = 'hash';
     ENV.baseURL = '/information-retrieval-prototype/';
-    ENV['ember-cli-mirage'] = { enabled: true };
+
+    ENV['ember-cli-mirage'] = {
+      enabled: true,
+      namespace: ENV.baseURL,
+    };
   }
 
   return ENV;
