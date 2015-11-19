@@ -1,3 +1,0 @@
-ul
-  each model as |category|
-    li = category.name
