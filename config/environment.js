@@ -40,7 +40,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.locationType = 'hash';
+    ENV['ember-cli-mirage'] = { enabled: true };
   }
 
   return ENV;
