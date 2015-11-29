@@ -1,62 +1,74 @@
 export default [
   {
     id: 1,
-    name: 'Auto\'s & Treinen',
+    title: 'Auto\'s & Treinen',
     keywords: ['auto', 'racebaan', 'pick-up', 'wagen', 'brandweer', 'trein', 'rails', 'wagon', 'station'],
+    icon: '🚘'
   },
   {
     id: 2,
-    name: 'Poppen & Prinsessen',
+    title: 'Poppen & Prinsessen',
     keywords: ['barbie', 'frozen', 'pop', 'model', 'baby born', 'poppenhuis', 'prinses'],
+    icon: '👸'
   },
   {
     id: 3,
-    name: 'Ridders & Piraten',
+    title: 'Ridders & Piraten',
     keywords: [],
+    icon: '☠'
   },
   {
     id: 4,
-    name: 'Politie & Brandweer',
+    title: 'Politie & Brandweer',
     keywords: [],
+    icon: '🚨'
   },
   {
     id: 5,
-    name: 'Dieren',
+    title: 'Dieren',
     keywords: [],
+    icon: '🐶'
   },
   {
     id: 6,
-    name: 'Superhelden',
+    title: 'Superhelden',
     keywords: [],
+    icon: '💥'
   },
   {
     id: 7,
-    name: 'Spelletjes & Puzzels',
+    title: 'Spelletjes & Puzzels',
     keywords: [],
+    icon: '🎮'
   },
   {
     id: 8,
-    name: 'Buitenspelen',
+    title: 'Buitenspelen',
     keywords: [],
+    icon: '⛹',
   },
   {
     id: 9,
-    name: 'Bouwen & Constructie',
+    title: 'Bouwen & Constructie',
     keywords: [],
+    icon: '🏗',
   },
   {
     id: 10,
-    name: 'Knutselen & Tekenen',
+    title: 'Knutselen & Tekenen',
     keywords: [],
+    icon: '🖍',
   },
   {
     id: 11,
-    name: 'Glitter & Glamour',
+    title: 'Glitter & Glamour',
     keywords: [],
+    icon: '💅',
   },
   {
     id: 12,
-    name: 'Rollenspel',
+    title: 'Rollenspel',
     keywords: [],
+    icon: '👹'
   },
 ];
