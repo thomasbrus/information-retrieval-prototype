@@ -1,3 +1,4 @@
-div.categories.page
-  h1 Listing categories...
-  p = link-to 'products' | Go to products
+section.categories
+  each model as |category|
+    link-to 'products' class="category"
+      h1.category-icon = category.icon
