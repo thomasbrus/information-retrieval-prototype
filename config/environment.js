@@ -11,6 +11,7 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'font-src': "'self' https://fonts.gstatic.com",
       'style-src': "'self' https://fonts.googleapis.com",
+      'img-src': "'self' data:",
     },
 
     EmberENV: {
