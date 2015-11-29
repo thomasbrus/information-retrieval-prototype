@@ -41,7 +41,7 @@ body
 
 @for $i from 0 through 12
   .category:nth-child(n + #{$i})
-    @include transform( scale(#{(85 + random(10)) / 100}) translate(#{-2 + random(4)}px, #{-2 + random(4)}px))
+    @include transform(rotate(#{-4 + random(8)}deg) scale(#{(87 + random(9)) / 100}) translate(#{-3 + random(6)}px, #{-3 + random(6)}px))
 
 .category:hover,
   @include transform(rotate(0) scale(1) translate(0, 0))
