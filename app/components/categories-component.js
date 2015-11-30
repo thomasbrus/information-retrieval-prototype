@@ -1,11 +1,13 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
-  queryParams: { selectedIds: 'ids' },
+let CategoriesComponent = Ember.Component.extend({
+  tagName: 'section',
+  classNames: ['categories'],
+
   selectedIds: [],
 
-  selectedCategories: Ember.computed('selectedIds', 'model.@each.id', function() {
-    return this.get('model').filter(this.isSelected.bind(this));
+  selectedCategories: Ember.computed('selectedIds', 'attrs.categories.@each.id', function() {
+    return this.get('attrs.categories').filter(this.isSelected.bind(this));
   }),
 
   isSelected(category) {
@@ -21,3 +23,9 @@ export default Ember.Controller.extend({
     },
   }
 });
+
+CategoriesComponent.reopenClass({
+  positionalParams: ['categories'],
+});
+
+export default CategoriesComponent;

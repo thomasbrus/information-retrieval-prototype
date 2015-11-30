@@ -1,3 +1,0 @@
-section.categories
-  each model as |category|
-    category-component category isSelected=(contains selectedCategories category)

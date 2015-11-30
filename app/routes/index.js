@@ -1,8 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  activate() {
-    this._super(...arguments);
-    this.replaceWith('categories');
-  },
+  model() {
+    return Ember.RSVP.hash({
+      categories: this.store.findAll('category'),
+      // searchResults: this.store.query('search-result', { q: 'auto' })
+    });
+  }
 });
