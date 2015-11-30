@@ -12,6 +12,7 @@ module.exports = function(environment) {
       'font-src': "'self' https://fonts.gstatic.com",
       'style-src': "'self' https://fonts.googleapis.com",
       'img-src': "'self' data: https://*.s3.amazonaws.com",
+      'connect-src': "'self' http://circus.ewi.utwente.nl:16842",
     },
 
     EmberENV: {
