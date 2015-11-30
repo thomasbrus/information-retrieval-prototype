@@ -1,2 +1,2 @@
-span.category-icon = category.icon
+img.category-icon src=category.iconUrl width="70px" height="70px"
 h1.category-title = category.title
