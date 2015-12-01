@@ -5,5 +5,5 @@ export default DS.Model.extend({
   resourceId: DS.attr('string'),
   score: DS.attr('number'),
   query: DS.attr('string'),
-  product: DS.belongsTo('product'),
+  product: DS.belongsTo('product', { async: false }),
 });
