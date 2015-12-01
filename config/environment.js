@@ -9,8 +9,7 @@ module.exports = function(environment) {
 
     // See https://github.com/rwjblue/ember-cli-content-security-policy#example
     contentSecurityPolicy: {
-      'font-src': "'self' https://fonts.gstatic.com",
-      'style-src': "'self' https://fonts.googleapis.com",
+      'style-src': "'self'",
       'img-src': "'self' data: https://*.s3.amazonaws.com",
       'connect-src': "'self' http://circus.ewi.utwente.nl:16842",
     },
