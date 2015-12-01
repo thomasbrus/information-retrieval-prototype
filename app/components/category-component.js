@@ -2,8 +2,11 @@ import Ember from 'ember';
 
 let CategoryComponent = Ember.Component.extend({
   tagName: 'a',
+
   classNames: ['category'],
   classNameBindings: ['isSelected:is-selected:is-not-selected'],
+
+  isSelected: false,
 
   action: Ember.computed('isSelected', function() {
     return this.get('isSelected') ? 'deselect' : 'select';
