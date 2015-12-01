@@ -3,7 +3,7 @@ import CategorySelection from '../models/category-selection';
 
 export default Ember.Route.extend({
   search: Ember.inject.service(),
-  queryParams: { categoryIds: { refreshModel: true } },
+  queryParams: { category_ids: { refreshModel: true } },
 
   model(params) {
     return this.store.findAll('category').then(categories => {
@@ -19,7 +19,7 @@ export default Ember.Route.extend({
   },
 
   serializeQueryParam(value, urlKey) {
-    if (urlKey === 'categoryIds') {
+    if (urlKey === 'category_ids') {
       return JSON.stringify(value.map(id => parseInt(id)));
     } else {
       this._super(...arguments);
@@ -27,7 +27,7 @@ export default Ember.Route.extend({
   },
 
   deserializeQueryParam(value, urlKey) {
-    if (urlKey === 'categoryIds') {
+    if (urlKey === 'category_ids') {
       return Ember.A(JSON.parse(value).map(id => id.toString()));
     } else {
       this._super(...arguments);

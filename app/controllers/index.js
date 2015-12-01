@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  queryParams: { selectedCategoryIds: 'categoryIds' },
+  queryParams: { selectedCategoryIds: 'category_ids' },
   selectedCategoryIds: [],
 
   actions: {
