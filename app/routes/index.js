@@ -22,7 +22,7 @@ export default Ember.Route.extend({
     if (urlKey === 'category_ids') {
       return JSON.stringify(value.map(id => parseInt(id)));
     } else {
-      this._super(...arguments);
+      return this._super(...arguments);
     }
   },
 
@@ -30,7 +30,7 @@ export default Ember.Route.extend({
     if (urlKey === 'category_ids') {
       return Ember.A(JSON.parse(value).map(id => id.toString()));
     } else {
-      this._super(...arguments);
+      return this._super(...arguments);
     }
   },
 });
