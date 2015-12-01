@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import CategorySelection from '../models/category-selection';
 
 export default Ember.Route.extend({
   search: Ember.inject.service(),
@@ -6,15 +7,11 @@ export default Ember.Route.extend({
 
   model(params) {
     return this.store.findAll('category').then(categories => {
-      let categorySelection = this.store.createRecord('category-selection', {});
+      let categorySelection = new CategorySelection(categories.filter(category =>
+        params.selectedCategoryIds.contains(category.get('id'))
+      ));
 
-      categories.forEach(category => {
-        if (params.selectedCategoryIds.contains(category.get('id'))) {
-          categorySelection.get('categories').addObject(category);
-        }
-      });
-
-      let query = categorySelection.get('searchQuery');
+      let query = categorySelection.buildSearchQuery();
       let searchResults = this.get('search').perform(query);
 
       return Ember.RSVP.hash({ categories, searchResults });
