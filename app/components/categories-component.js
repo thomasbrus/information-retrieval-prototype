@@ -6,14 +6,19 @@ let CategoriesComponent = Ember.Component.extend({
 
   selectedIds: [],
 
+  selectCategoryAction: 'selectCategory',
+  deselectCategoryAction: 'deselectCategory',
+
   actions: {
     select(category) {
-      this.get('selectedIds').addObject(category.get('id'));
+      this.sendAction('selectCategoryAction', category);
+      // this.get('selectedIds').addObject(category.get('id'));
     },
     deselect(category) {
-      this.get('selectedIds').removeObject(category.get('id'));
+      this.sendAction('deselectCategoryAction', category);
+      // this.get('selectedIds').removeObject(category.get('id'));
     },
-  }
+  },
 });
 
 CategoriesComponent.reopenClass({
