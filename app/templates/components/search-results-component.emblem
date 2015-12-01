@@ -1,0 +1,5 @@
+each sortedSearchResults as |searchResult|
+  li = searchResult.product.title
+
+else
+  | No products found.

@@ -1,1 +1,2 @@
 categories-component model.categories selectedIds=selectedCategoryIds
+search-results-component model.searchResults
