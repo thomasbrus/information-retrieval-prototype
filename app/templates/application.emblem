@@ -1,1 +1,1 @@
-= liquid-outlet class="page"
+div.page = outlet

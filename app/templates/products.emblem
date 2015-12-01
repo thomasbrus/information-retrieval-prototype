@@ -1,4 +1,0 @@
-h1 Listing products...
-p
-  = link-to 'categories' | Back to categories
-  = link-to 'wishlist' | View wishlist
