@@ -1,6 +1,6 @@
 <?php
 $query = rawurlencode($_GET['q'])  or die('Query is not specified');
-$pageurl = "http://www.lobbes.nl/zoek/$query/all";
+$pageurl = "http://www.lobbes.nl/zoek/$query/speelgoed";
 
 $displayhtml = isset($_GET['displayhtml']);
 
