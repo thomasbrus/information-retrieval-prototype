@@ -28,7 +28,7 @@ foreach($itemdivs as $div) {
 	if($price == null)
 		$price = $doc->query("div[@class='actie_prijs']", $div)->item(0)->childNodes->item(1)->nodeValue;
 
-	$id++;
+	$id = md5($producturl);
 	
 	$product_object = array('id'=> $id, 'product'=>array('id'=> $id,'title'=>$title, 'available'=>$available, 'dimensions'=>$dimensions, 'price'=>$price, 'url'=>$producturl, 'imageUrl'=>$imgurl));
 	$product_html = "<a href='$producturl'>Title: $title<br />Price: €$price<br />Dimensions: $dimensions<br />Available: ".($available?'true':'false')."<br /><img src='$imgurl' /></a><br /><hr />";
