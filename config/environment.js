@@ -11,7 +11,7 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'style-src': "'self'",
       'img-src': "'self' data: https://*.s3.amazonaws.com",
-      'connect-src': "'self' http://circus.ewi.utwente.nl:16842",
+      'connect-src': "'self' http://localhost:8080",
     },
 
     EmberENV: {
