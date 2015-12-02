@@ -1,14 +1,10 @@
 import DS from 'ember-data';
 
-export default DS.JSONAPIAdapter.extend({
-  host: 'http://circus.ewi.utwente.nl:16842',
-  namespace: 'searsia',
-
-  headers: {
-    'Accept': 'application/searsia+json;charset=UTF-8',
-  },
+export default DS.RESTAdapter.extend({
+  host: 'http://localhost:8080',
+  // namespace: 'bla',
 
   urlForQuery() {
-    return `${this.buildURL()}/search`;
+    return `${this.buildURL()}/index.php`;
   },
 });
