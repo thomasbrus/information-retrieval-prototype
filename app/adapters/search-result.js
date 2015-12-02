@@ -5,6 +5,6 @@ export default DS.RESTAdapter.extend({
   // namespace: 'bla',
 
   urlForQuery() {
-    return `${this.buildURL()}/index.php`;
+    return `${this.buildURL()}/search.php`;
   },
 });
