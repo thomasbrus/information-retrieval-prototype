@@ -22,7 +22,7 @@ while(true) {
 		break;
 
 	$pageurl = $next_link->item(0)->getAttribute('href');
-	// Fix for incorrect <link rel="next" href> on www.lobbes.nl/nieuwe-artikelen/speelgoed
+	// Fix for incorrect <link rel> on www.lobbes.nl/nieuwe-artikelen/speelgoed
 	$pageurl = substr($pageurl, strrpos($pageurl, 'http://'));
 }
 
@@ -36,13 +36,10 @@ foreach($docs as $doc){
 
 		$title = $name->nodeValue;
 		$producturl = 'http://www.lobbes.nl/'.$name->getAttribute('href');
+		$price = $doc->query("div[@class='prijs']", $div)->item(0)->nodeValue;
 		$imgurl = $doc->query("a/img", $div)->item(0)->getAttribute('src');
 		$available = $doc->query("div/form", $div)->length > 0;
-		$dimensions = $doc->query("div[@class='afmeting']/div[@class='opt_afmetingen']", $div)->item(0)->nodeValue;
-
-		$price = $doc->query("div[@class='prijs']", $div)->item(0)->nodeValue;
-		if($price == null)
-			$price = $doc->query("div[@class='actie_prijs']", $div)->item(0)->childNodes->item(1)->nodeValue;
+		$dimensions = $doc->query("div[@class='afmeting']/span[@class='opt_afmeting']", $div)->item(0)->nodeValue;
 
 		$product_doc = getParser($producturl);
 
