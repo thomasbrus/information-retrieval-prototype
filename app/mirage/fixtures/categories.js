@@ -60,17 +60,17 @@ export default [
     iconUrl: 'https://emojipedia-us.s3.amazonaws.com/cache/f5/a1/f5a1d8d9f45704c6ff2345b024700b1b.png'
   },
   {
-    id: 12,
+    id: 13,
     title: 'Rollenspel & Verkleden',
     iconUrl: 'https://emojipedia-us.s3.amazonaws.com/cache/f5/a1/f5a1d8d9f45704c6ff2345b024700b1b.png'
   },
   {
-    id: 13,
+    id: 14,
     title: 'Speelfiguren',
     iconUrl: 'https://emojipedia-us.s3.amazonaws.com/cache/f5/a1/f5a1d8d9f45704c6ff2345b024700b1b.png'
   },
   {
-    id: 14,
+    id: 15,
     title: 'Schoolspullen',
     iconUrl: 'https://emojipedia-us.s3.amazonaws.com/cache/f5/a1/f5a1d8d9f45704c6ff2345b024700b1b.png'
   },
