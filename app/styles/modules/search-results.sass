@@ -1,2 +1,18 @@
 .search-results
   @include grid($min-width: 180px, $gutter: 30px)
+
+.search-results-loading
+  @include display(flex)
+  @include align-items(center)
+  @include justify-content(center)
+  height: 120px
+  width: 100% !important
+  border: 1px #ccc solid
+  border-radius: 4px
+
+.search-results-loading:before
+  @include icon($icon-circle-o-notch)
+  @include animation(spin 0.5s infinite linear)
+  width: 1.28571429em
+  text-align: center
+  font-size: 20px

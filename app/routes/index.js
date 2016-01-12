@@ -33,4 +33,19 @@ export default Ember.Route.extend({
       return this._super(...arguments);
     }
   },
+
+  actions:  {
+    loading() {
+      let controller = this.controllerFor(this.routeName);
+      controller.set('isLoading', true);
+      this.router.one('didTransition', () => controller.set('isLoading', false));
+      return true;
+    },
+
+    error() {
+      this.controllerFor(this.routeName).set('isLoading', false);
+      return true;
+    }
+  }
+  
 });
