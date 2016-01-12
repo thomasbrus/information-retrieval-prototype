@@ -1,0 +1,21 @@
+$color-loading-slider: #84FFFF;
+$z-index-loading-slider: 1;
+
+#nprogress {
+  position: relative;
+  z-index: $z-index-loading-slider;
+}
+
+#nprogress .bar {
+  background: $color-loading-slider;
+  z-index: $z-index-loading-slider;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px $color-loading-slider, 0 0 5px $color-loading-slider;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: $color-loading-slider;
+  border-left-color: $color-loading-slider;
+}
