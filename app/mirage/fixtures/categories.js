@@ -22,7 +22,7 @@ export default [
   {
     id: 5,
     title: 'Feest',
-    iconUrl: 'http://emojipedia-us.s3.amazonaws.com/cache/02/e5/02e5e081415497b60674649cfd1fc12d.png'
+    iconUrl: 'https://emojipedia-us.s3.amazonaws.com/cache/02/e5/02e5e081415497b60674649cfd1fc12d.png'
   },
   {
     id: 6,
@@ -32,12 +32,12 @@ export default [
   {
     id: 7,
     title: 'Leren en Experimenteren',
-    // iconUrl: 'https://emojipedia-us.s3.amazonaws.com/cache/1e/df/1edf5fc2c992811a5d7ec80bec9bda98.png'
+    iconUrl: 'https://emojipedia-us.s3.amazonaws.com/cache/f8/85/f885e4ab09ddc0f1ccbe8fcd850dc0af.png'
   },
   {
     id: 8,
     title: 'Houten speelgoed',
-    // iconUrl: 'https://emojipedia-us.s3.amazonaws.com/cache/cb/64/cb6434057ae1eb1085cd2f22625903f2.png',
+    iconUrl: 'https://emojipedia-us.s3.amazonaws.com/cache/c9/06/c90675fb805938195c144c58433d5e1e.png'
   },
   {
     id: 9,
@@ -52,7 +52,7 @@ export default [
   {
     id: 11,
     title: 'Puzzels',
-    // iconUrl: 'https://emojipedia-us.s3.amazonaws.com/cache/a4/06/a40602438568668fae070277a0d051f4.png',
+    iconUrl: 'https://emojipedia-us.s3.amazonaws.com/cache/63/fc/63fcd598c7b512ddc3ee8679008e08d6.png'
   },
   {
     id: 12,
@@ -62,12 +62,12 @@ export default [
   {
     id: 13,
     title: 'Rollenspel & Verkleden',
-    // iconUrl: 'https://emojipedia-us.s3.amazonaws.com/cache/f5/a1/f5a1d8d9f45704c6ff2345b024700b1b.png'
+    iconUrl: 'https://emojipedia-us.s3.amazonaws.com/cache/9c/42/9c42b8e37d2fa2940618508f65f419ab.png'
   },
   {
     id: 14,
     title: 'Speelfiguren',
-    // iconUrl: 'https://emojipedia-us.s3.amazonaws.com/cache/f5/a1/f5a1d8d9f45704c6ff2345b024700b1b.png'
+    iconUrl: 'https://emojipedia-us.s3.amazonaws.com/cache/f9/7d/f97d775350fabdf215cf234e32965866.png'
   },
   {
     id: 15,

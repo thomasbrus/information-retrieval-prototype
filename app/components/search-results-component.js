@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 let SearchResultsComponent = Ember.Component.extend({
-  tagName: 'section',
+  tagName: 'ul',
   classNames: ['search-results'],
 
   searchResultsSorting: ['rank:asc'],

@@ -4,6 +4,6 @@ export default class {
   }
 
   buildSearchQuery() {
-    return this.categories.mapBy('searchTerm').join(' ');    
-  },
+    return this.categories.mapBy('title').join(' ');
+  }
 }

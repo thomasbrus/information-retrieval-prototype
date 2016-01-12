@@ -2,7 +2,7 @@ import Ember from 'ember';
 import CategorySelection from '../models/category-selection';
 
 export default Ember.Route.extend({
-  search: Ember.inject.service(),
+  searchService: Ember.inject.service('search'),
   queryParams: { category_ids: { refreshModel: true } },
 
   model(params) {
@@ -12,7 +12,7 @@ export default Ember.Route.extend({
       ));
 
       let query = categorySelection.buildSearchQuery();
-      let searchResults = this.get('search').perform(query);
+      let searchResults = this.get('searchService').perform(query);
 
       return Ember.RSVP.hash({ categories, searchResults });
     });

@@ -1,0 +1,51 @@
+@mixin grid($min-width: 160px, $gutter: 15px, $hide-orphan: false)
+  @include display(flex)
+  @include flex-wrap(wrap)
+
+  & > *
+    margin-top: $gutter
+    margin-left: $gutter
+    min-width: $min-width
+
+  @for $i from 0 through 5
+    &[min-width~="#{$min-width * ($i + 1) + $gutter * $i}"][max-width~="#{$min-width * ($i + 2) + $gutter * ($i + 1) - 1px}"]
+      & > *
+        width: calc((100% / (#{$i} + 1)) - #{$gutter} * (#{$i} / (#{$i} + 1)))
+
+      @for $j from 1 through ($i + 1)
+        & > *:nth-child(#{$j})
+          margin-top: 0
+
+      & > *:nth-child(#{$i + 1}n + 1)
+        margin-left: 0
+
+      @if $hide-orphan
+        & > *:nth-child(#{$i + 1}n + 1):last-child
+          display: none
+
+  &[max-width~="#{$min-width}"]
+    & > *
+      width: 100%
+      min-width: initial
+
+    & > *:nth-child(1),
+      margin-top: 0
+
+    & > *:nth-child(1n + 1)
+      margin-left: 0
+
+  &[min-width~="#{$min-width * (6 + 1) + $gutter * 6}"]
+    & > *
+      width: calc((100% / 7) - 15px * (6 / 7))
+
+    & > *:nth-child(1),
+    & > *:nth-child(2),
+    & > *:nth-child(3),
+    & > *:nth-child(4),
+    & > *:nth-child(5),
+    & > *:nth-child(6),
+    & > *:nth-child(7)
+      margin-top: 0
+
+    & > *:nth-child(7n + 1)
+      margin-left: 0

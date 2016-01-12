@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 let CategoriesComponent = Ember.Component.extend({
-  tagName: 'section',
+  tagName: 'ul',
   classNames: ['categories'],
 
   selectedIds: [],
