@@ -4,8 +4,6 @@ export default class {
   }
 
   buildSearchQuery() {
-    return this.categories.reduce((query, category) => (
-      `${query} ${category.get('keywords').join(' ')}`
-    ), "");
+    return this.categories.mapBy('title').join(' ');
   }
 }

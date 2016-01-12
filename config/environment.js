@@ -9,9 +9,9 @@ module.exports = function(environment) {
 
     // See https://github.com/rwjblue/ember-cli-content-security-policy#example
     contentSecurityPolicy: {
-      'style-src': "'self'",
-      'img-src': "'self' data: https://*.s3.amazonaws.com",
       'connect-src': "'self' http://localhost:8080",
+      'img-src': "'self' data: https://*.s3.amazonaws.com http://www.lobbes.nl http://static.intertoys.nl https://www.degrotespeelgoedwinkel.nl",
+      'style-src': "'self' 'unsafe-inline'",
     },
 
     EmberENV: {

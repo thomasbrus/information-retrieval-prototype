@@ -19,5 +19,9 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  app.import('bower_components/elementQuery/elementQuery.js');
+  app.import('bower_components/nprogress/nprogress.js');
+  app.import('bower_components/nprogress/nprogress.css');
+
   return app.toTree();
 };
