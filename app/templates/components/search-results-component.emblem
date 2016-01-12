@@ -1,5 +1,6 @@
-each sortedSearchResults as |searchResult|
-  li: search-result-component searchResult
+if isLoading
+  div.search-results-loading
 
 else
-  | No products found.
+  each sortedSearchResults as |searchResult|
+    li: search-result-component searchResult
