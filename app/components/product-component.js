@@ -9,7 +9,7 @@ let ProductComponent = Ember.Component.extend({
     } else {
       return null;
     }
-  })
+  }),
 });
 
 ProductComponent.reopenClass({

@@ -6,6 +6,8 @@
   border: 1px #D2D2D2 solid
   border-radius: 3px 3px 5px 5px
   box-shadow: 1px 1px 1px rgba(#000, 0.05)
+  position: relative
+  overflow: hidden
 
 .product-image
   background-size: 50%
@@ -15,6 +17,10 @@
   background-position: center center
 
 .product-details
+  @include display(flex)
+  @include justify-content(space-between)
+  @include align-items(center)
+  padding: 1.25em 1em
   border-top: 1px rgba(0, 0, 0, 0.15) dotted
   margin-top: auto
   background: linear-gradient(#fff, #fafafa)
@@ -25,8 +31,24 @@
   color: #757575
   font-size: 13px
   text-align: center
-  padding: 1.25em 1em
   text-shadow: 1px 1px #FFF
+  font-weight: 600
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+
+.product-title + .product-price
+  margin-left: 0.5em
+
+.product-price
+  background: linear-gradient(#757575, #BDBDBD)
+  border-radius: 5px
+  color: #fff
+  font-size: 11px
+  padding: 0.1em 0.5em
+  box-shadow: inset 1px 1px 0 #616161, 1px 1px #fff
+  height: 0%
+  text-shadow: 1px 1px #9E9E9E
 
 .search-result:hover .product
   border: 1px mix(#D2D2D2, #FF8F00, 75%) solid
