@@ -2,5 +2,5 @@ if isLoading
   div.search-results-loading
 
 else
-  each sortedSearchResults as |searchResult|
+  each searchResults as |searchResult|
     li: search-result-component searchResult
