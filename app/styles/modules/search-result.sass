@@ -1,0 +1,14 @@
+.search-result
+  @include transition-property(transform)
+  @include transition-duration(50ms)
+  @include transition-timing-function(ease-in-out)
+  display: block
+  width: 170px
+  margin: 0 auto 30px auto
+  text-decoration: none
+
+.search-result:hover
+  @include transform(scale(1.025) translateY(-1px))
+
+.search-result:active, .search-result:focus
+  @include transform(scale(1) translateY(1px))

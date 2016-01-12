@@ -1,2 +1,2 @@
-img.category-icon src=category.iconUrl width="70px" height="70px"
+img.category-icon src=category.iconUrl width="40px" height="40px"
 h1.category-title = category.title

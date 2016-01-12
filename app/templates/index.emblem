@@ -1,2 +1,5 @@
-categories-component model.categories selectedIds=selectedCategoryIds
-search-results-component model.searchResults
+.categories-page
+  categories-component model.categories selectedIds=selectedCategoryIds
+
+.search-results-page
+  search-results-component model.searchResults

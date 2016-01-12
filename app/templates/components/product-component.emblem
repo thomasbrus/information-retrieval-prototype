@@ -1,0 +1,10 @@
+div.product-image style=productImageStyle
+
+div.product-details
+  h1.product-title = product.title
+
+/ description: DS.attr('string'),
+/ imageUrl: DS.attr('string'),
+/ price: DS.attr('string'),
+/ title: DS.attr('string'),
+/ url: DS.attr('string'),

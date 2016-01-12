@@ -13,6 +13,7 @@ let CategoryComponent = Ember.Component.extend({
   click() {
     this._super(...arguments);
     this.sendAction('action', this.attrs.category);
+    this.toggleProperty('isSelected');
   },
 
   didInsertElement() {

@@ -1,2 +1,2 @@
 each categories as |category|
-  category-component category isSelected=(contains selectedIds category.id)
+  li: category-component category isSelected=(contains selectedIds category.id)
