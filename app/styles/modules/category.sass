@@ -6,26 +6,13 @@
   @include linear-gradient(#FFF, #F5F5F5)
   @include transition(transform, 150ms)
   box-shadow: inset 1px 1px 0 1px #FFF, 1px 1px #BDBDBD, 4px 4px 8px rgba(#BDBDBD, 0.2)
-  float: left
-  width: 175px
-  height: 175px
+  width: 150px
+  height: 150px
   border-radius: 100%
-  padding: 20px
   text-decoration: none
   position: relative
   cursor: pointer
-
-.category:nth-child(4n + 2),
-.category:nth-child(4n + 3),
-.category:nth-child(4n + 4)
-  margin-left: 30px
-
-.category:nth-child(n + 5)
-  margin-top: 30px
-
-@for $i from 0 through 12
-  .category:nth-child(n + #{$i})
-    @include transform(rotate(#{-4 + random(8)}deg) scale(#{(87 + random(9)) / 100}) translate(#{-3 + random(6)}px, #{-3 + random(6)}px))
+  margin: 0 auto
 
 .category:before
   @include transition-property(transform, opacity)
@@ -42,7 +29,7 @@
   color: #fff
   text-shadow: -1px -1px #FF6F00
   box-shadow: inset -1px -1px 2px #FFA000
-  font-size: 17px
+  font-size: 13px
   font-weight: $font-weight-semi-bold
   opacity: 0
 
@@ -72,7 +59,7 @@
   @include transition(color, 150ms)
   color: #BDBDBD
   text-shadow: 1px 1px #fff
-  font-size: 15px
+  font-size: 13px
   text-align: center
   font-weight: 600
   padding: 0 2em

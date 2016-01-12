@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
 let CategoryComponent = Ember.Component.extend({
-  tagName: 'a',
-
   classNames: ['category'],
   classNameBindings: ['isSelected:is-selected:is-not-selected'],
 
@@ -16,6 +14,11 @@ let CategoryComponent = Ember.Component.extend({
     this._super(...arguments);
     this.sendAction('action', this.attrs.category);
   },
+
+  didInsertElement() {
+    this._super();
+    Ember.run.schedule('afterRender', window.elementQuery);
+  }
 });
 
 CategoryComponent.reopenClass({
