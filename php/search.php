@@ -13,8 +13,6 @@ define("PAGE_COUNT", 3);
 $query = rawurlencode($_GET['q'])  or die('Query is not specified');
 $pageurl = "http://www.lobbes.nl/zoek/$query/speelgoed";
 
-$displayhtml = isset($_GET['displayhtml']);
-
 $docs = array();
 $i = 0;
 
@@ -49,21 +47,18 @@ foreach($docs as $doc) {
 		$price = $doc->query("div[@class='prijs']", $div)->item(0)->nodeValue;
 		if($price == null)
 			$price = $doc->query("div[@class='actie_prijs']", $div)->item(0)->childNodes->item(1)->nodeValue;
+		$price = str_replace(',', '.', $price);
+		$price = (float) $price;
 
 		$id = md5($producturl);
 	
 		$product_object = array('id'=> $id, 'product'=>array('id'=> $id,'title'=>$title, 'available'=>$available, 'dimensions'=>$dimensions, 'price'=>$price, 'url'=>$producturl, 'imageUrl'=>$imgurl));
-		$product_html = "<a href='$producturl'>Title: $title<br />Price: €$price<br />Dimensions: $dimensions<br />Available: ".($available?'true':'false')."<br /><img src='$imgurl' /></a><br /><hr />";
-
-		if($displayhtml)
-			echo $product_html;
-		else
-			array_push($products, $product_object);
+		array_push($products, $product_object);
 	}
 }
 
 $output = array('searchResults'=>$products);
 
-if(!$displayhtml)
-	echo json_encode($output);
+header('Content-Type: application/json');
+echo json_encode($output);
 ?>
