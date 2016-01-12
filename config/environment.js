@@ -9,7 +9,7 @@ module.exports = function(environment) {
 
     // See https://github.com/rwjblue/ember-cli-content-security-policy#example
     contentSecurityPolicy: {
-      'connect-src': "'self' http://localhost:8080",
+      'connect-src': "'self' http://glacial-crag-9384.herokuapp.com",
       'img-src': "'self' data: https://*.s3.amazonaws.com http://www.lobbes.nl http://static.intertoys.nl https://www.degrotespeelgoedwinkel.nl",
       'style-src': "'self' 'unsafe-inline'",
     },
