@@ -5,9 +5,6 @@ let SearchResultsComponent = Ember.Component.extend({
   classNames: ['search-results'],
 
   isLoading: false,
-
-  searchResultsSorting: ['rank:asc'],
-  sortedSearchResults: Ember.computed.sort('searchResults', 'searchResultsSorting')
 });
 
 SearchResultsComponent.reopenClass({
