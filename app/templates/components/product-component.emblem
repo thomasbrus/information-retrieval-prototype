@@ -1,5 +1,5 @@
-div.product-image style=productImageStyle
+div.product-image style=imageStyle
 
 div.product-details
   h1.product-title = product.title
-  span.product-price = product.price
+  span.product-price
